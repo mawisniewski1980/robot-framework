@@ -61,3 +61,73 @@ myDict = {
 print(myDict)
 print(myDict["barry"])
 print(myDict.get("barry"))
+
+d = 222
+d = int(d)
+print(d)
+print(type(d))
+
+# if conditional statememnt
+
+a = 10
+b = 100
+c = 9
+d = 10
+
+if(a>b):
+    print("a is greater")
+elif(c>a):
+    print("c is grater")
+elif(a==d):
+    print("a is equal d")        
+else:
+    print("b is greater")    
+
+# loops 
+
+i = 0
+while(i<10):
+   print("Hello ")
+   i = i + 1    
+
+for i in range(0, 12):
+    print(i)   
+
+fruits = ["Graphes", "Water melons", "Oranges", "Apples"]  
+for item in fruits:
+     print("Fruits: " + item)
+     if item == "Oranges":
+         print("Oranges found")
+         break # continue
+
+print("XXXXXXXXXXXXXXXXXX")
+
+for item in fruits:
+    if item == "Oranges":
+         print("Oranges found")
+         continue
+print("Fruits: " + item) 
+
+# functions
+
+def printList(list1):
+    for item in list1:
+        print("in list: ", item)
+
+printList(fruits)
+
+# files
+f = open("1.txt", "w")
+print("Name: ", f.name)
+print("Closed: ", f.closed)
+print("Mode: ", f.mode)
+print("xxxxxxxxxxxxxxxxxxxxx")
+
+f.write("dasdasdasdsad")
+f.close()
+print("Name: ", f.name)
+print("Closed: ", f.closed)
+print("Mode: ", f.mode)
+
+# class
+
