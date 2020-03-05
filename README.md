@@ -31,8 +31,3 @@
  - https://pypi.org/project/robotframework-selenium2screenshots/
  - https://github.com/robotframework/SeleniumLibrary/#browser-drivers
  
-### Page
- https://phptravels.com/demo/
-   https://www.phptravels.net/home
-   - Email user@phptravels.com
-   - Password demouser
