@@ -18,11 +18,11 @@ Valid Login
     Welcome Page Should Be Open
     [Teardown]    Close Browser
 
-Valid Login Global Step
+Valid Login Global Step List
     [Documentation]    Test Two. Open test page and try to log in.
     [Tags]    LOGIN
     [Setup]    Setup browser
-    Set Username Password and Submit    ${USERNAME}    ${USERPASS}
+    Set Username Password and Submit    @{CREDENTIALS}[0]    @{CREDENTIALS}[1]
     Welcome Page Should Be Open
     [Teardown]    Close Browser
 
@@ -32,4 +32,12 @@ Invalid Login
     [Setup]    Setup browser
     Set Username Password and Submit    ${USERNAME}    blebleble
     Element Text Should Be    id:spanMessage    Invalid credentials
+    [Teardown]    Close Browser
+
+Valid Login Global Step Dict
+    [Documentation]    Test Four. Open test page and try to log in.
+    [Tags]    LOGIN
+    [Setup]    Setup browser
+    Set Username Password and Submit    &{CREDENTIALS DICT}[User]    &{CREDENTIALS DICT}[Pass]
+    Welcome Page Should Be Open
     [Teardown]    Close Browser
