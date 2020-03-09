@@ -11,9 +11,9 @@ Resource          Steps/globalSteps.robot
 Valid Login
     [Documentation]    Test One. Open test page and try to log in.
     [Tags]    LOGIN
-    Open Browser To Login Page
-    Input Username    ${USERNAME}
-    Input Password    ${USERPASS}
+    [Setup]    Setup browser
+    Set Username    ${USERNAME}
+    Set Password    ${USERPASS}
     Submit Credentials
     Welcome Page Should Be Open
     [Teardown]    Close Browser
@@ -21,8 +21,7 @@ Valid Login
 Valid Login Global Step
     [Documentation]    Test Two. Open test page and try to log in.
     [Tags]    LOGIN
-    Open Browser To Login Page
-    Input Username and Password    ${USERNAME}    ${USERPASS}
-    Submit Credentials
+    [Setup]    Setup browser
+    Set Username Password and Submit    ${USERNAME}    ${USERPASS}
     Welcome Page Should Be Open
     [Teardown]    Close Browser

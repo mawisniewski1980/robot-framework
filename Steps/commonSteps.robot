@@ -1,15 +1,16 @@
+*** Settings ***
+Library           SeleniumLibrary
+
 *** Keywords ***
-Open Browser To Login Page
+Setup browser
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
-    Wait Until Element Is Visible    id:divLoginImageContainer
-    Title Should Be    OrangeHRM
 
-Input Username
+Set Username
     [Arguments]    ${USERNAME}
     Input Text    name:txtUsername    ${USERNAME}    clear=True
 
-Input Password
+Set Password
     [Arguments]    ${USERPASS}
     Input Text    name:txtPassword    ${USERPASS}    clear=True
 
