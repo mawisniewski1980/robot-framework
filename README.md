@@ -30,4 +30,5 @@
  - https://github.com/robotframework/SeleniumLibrary/
  - https://pypi.org/project/robotframework-selenium2screenshots/
  - https://github.com/robotframework/SeleniumLibrary/#browser-drivers
+ - https://github.com/bulkan/robotframework-requests/#readme
  
