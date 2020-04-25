@@ -42,9 +42,10 @@
  # (execute all TC with name Example in example.robot file)
  - robot --test Example example.robot 
  # (execute TC with tag "ONE" in project)
- - robot --include ONE .    
+ - robot --include ONE .
+ - robot --include ONE LoginSuite.robot     
  # (execute TC with tags "one" and "two" in project)
- - robot --include oneANDtwo .    
+ - robot --include ONEANDTWO .    
  # (execute TC with tag "one" but no tag "two" in project)
  - robot --include oneNOTtwo .
  # (execute TC from suites named "positive" in project)
