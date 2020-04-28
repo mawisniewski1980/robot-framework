@@ -61,6 +61,10 @@
 ##### (execute TC with tag "one" but no tag "two" in project)
  - robot --include oneNOTtwo .
  
+##### (execute TC withhout tag one)
+ - robot --exclude Test* TestSuite.robot
+ - robot -e TestName TestSuite.robot
+ 
 ##### (execute TC from suites named "positive" in project)
  - robot --suite positive .
  
@@ -71,4 +75,11 @@
  - robot --rerunfailedsuites output.xml . 
  
 #### execute TC and save the results in folder
- - 
+ - robot -t TestName -d Results TestSuite.robot
+ 
+#### execute TC and mark as critical or noncritical
+ - robot -i TAGONE --critical TAGONE TestSuite.txt
+ - robot -i TAGONE -c TAGONE TestSuite.txt
+ 
+ - robot -i TAGONE --noncritical TAGONE TestSuite.txt
+ - robot -i TAGONE -n TAGONE TestSuite.txt
