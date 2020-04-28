@@ -33,24 +33,42 @@
  - https://github.com/bulkan/robotframework-requests/#readme
  
 ### how to run tests
+##### (execute TC from cmd)
+ - robot -t TestName TestSuite.robot
+ - robot -t TestName1 -t TestName2 TestSuite.robot
+ 
 ##### (execute all TC in project)
  - robot . 
-##### (execute all TC in example.robot file)
- - robot example.robot 
+ 
+##### (execute all TC in TestSuite.robot file)
+ - robot TestSuite.robot 
+ 
 ##### (execute all TC with name Example )
  - robot --test Example . 
-##### (execute all TC with name Example in example.robot file)
- - robot --test Example example.robot 
+ 
+##### (execute all TC with name Example in TestSuite.robot file)
+ - robot --test Example TestSuite.robot 
+ 
 ##### (execute TC with tag "ONE" in project)
  - robot --include ONE .
- - robot --include ONE LoginSuite.robot     
+ - robot --include ONE TestSuite.robot     
+ - robot -i TAGONE TestSuite.robot
+ - robot -i TAGO* TestSuite.robot
+ 
 ##### (execute TC with tags "one" and "two" in project)
  - robot --include ONEANDTWO .    
+ 
 ##### (execute TC with tag "one" but no tag "two" in project)
  - robot --include oneNOTtwo .
+ 
 ##### (execute TC from suites named "positive" in project)
  - robot --suite positive .
-##### (execute TC from suite "feat\positive" in project)
- - robot --suite feat.positive .
+ 
+##### (execute TC from suite "folder\positive" in project)
+ - robot --suite folder.positive .
+ 
 ##### execute TC with failed TC in previous run (saved in output.xml)
  - robot --rerunfailedsuites output.xml . 
+ 
+#### execute TC and save the results in folder
+ - 
